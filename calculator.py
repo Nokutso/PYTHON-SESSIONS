@@ -13,6 +13,10 @@ def multiply(num1, num2):
 def divide(num1, num2):
     return num1/num2
 
+def output(sign, num1, num2, answer):
+    print('\nThe Answer:')
+    print(f"{num1} {sign} {num2} = {answer}\n")
+
 #TO MAKE THE PROGRAM A BIT PRESENTABLE WHEN IT RUNS
 print("###############################################################")
 print("                     BASIC CALCULATOR")
@@ -28,15 +32,15 @@ operation = input("The Operation: ")
 #OPTIONS ON WHICH OPERATION IS GOING TO BER USED FOR CALCULATION
 if operation == "+":
     result = add(digit1, digit2)
-    print(result)
+    output(operation, digit1, digit2, result)
 elif operation == "-":
     result = minus(digit1, digit2)
-    print(result)
+    output(operation, digit1, digit2, result)
 elif operation == "*" or operation == "x" or operation == "X":
     result = multiply(digit1, digit2)
-    print(result)
+    output(operation, digit1, digit2, result)
 elif operation == "/":
     result = divide(digit1, digit2)
-    print(result)
+    output(operation, digit1, digit2, result)
 else:
     print("Invalid Operation Entered!")
